@@ -246,7 +246,7 @@ def train(train_iter: ForeverDataIterator, model, moving_avg_model: GeneralMovin
 
 def attention_align_loss(attn_output_weights_list, attention_distribution, label, args):
     class_token_attention = []
-    for attn in attn_output_weights_list[:args.layer]:
+    for attn in attn_output_weights_list[:5]:
         #take the class token attention
         # if args.layer > 6:
         #     attn = torch.mean(attn, dim=1)#multiple heads
