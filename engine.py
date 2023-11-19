@@ -267,13 +267,12 @@ def attention_align_loss(attn_output_weights_list, attention_distribution, label
     return kl_div
 
 class AdaptiveLabelSmoothingLoss(nn.Module):
-    def __init__(self, distribution, smoothing=0.05):
+    def __init__(self, distribution, epsilon=0.9):
         super(AdaptiveLabelSmoothingLoss, self).__init__()
         self.distribution = distribution
         #assert 0 <= smoothing < 1
         self.num_classes = self.distribution.size(1)
-        self.smoothing = smoothing
-        self.confidence = 0.9
+        self.confidence = epsilon
 
     def forward(self, pred, target):
         #one_hot = F.one_hot(target, num_classes=self.num_classes).float()

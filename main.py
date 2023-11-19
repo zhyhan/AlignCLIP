@@ -77,7 +77,7 @@ def main(args: argparse.Namespace):
     best_val_acc1 = evaluate_all(classifier, val_loader, train_text_features, test_loaders, args, writer, device)
 
     # start training
-    loss = AdaptiveLabelSmoothingLoss(similarity_matrix, args.smoothing)
+    loss = AdaptiveLabelSmoothingLoss(similarity_matrix, args.epsilon)
     for epoch in range(args.epochs):
         print(f"Learning rate: {lr_scheduler.get_last_lr()}")
         
@@ -145,8 +145,9 @@ if __name__ == '__main__':
                         "Use CLIP's original temperature in default.")
     parser.add_argument('--alpha', type=float, default=0.3)
     parser.add_argument('--beta', type=float, default=0.5)
-    parser.add_argument('--aloss', type=float, default=1)
+    parser.add_argument('--aloss', type=float, default=10)
     parser.add_argument('--layer', type=int, default=5)
     parser.add_argument('--smoothing', type=float, default=35)
+    parser.add_argument('--epsilon', type=float, default=0.9)
     args = parser.parse_args()
     main(args)
