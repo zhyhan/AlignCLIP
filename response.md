@@ -1,5 +1,8 @@
 # Reviewer 1
 
+We sincerely appreciate your invaluable insights for the contributions comparison to CLIP Surgery. We have conducted additional experiments and discussions put the results in the revised PDF. If there are any further areas of our research that need clarification, or if there are additional queries your might have, we are more than willing to provide further explanations.
+
+
 **W1: Limited novelty: Although it achieves SOTA results, I have some concerns regarding the technical contribution of the work. Specifically, I find it as a combination of existing techniques. a) ... b) ....**
 
 **Reply:** Thank you for the essential comments. These comments can significantly improve the quality of this paper and make it more logical and self-contained. First of all, we thank you for appreciating our work.

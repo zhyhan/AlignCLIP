@@ -21,13 +21,11 @@ sdist/
 var/
 exps/
 logs/
-figs/
 wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-*.ipynb
 MANIFEST
 
 # PyInstaller
