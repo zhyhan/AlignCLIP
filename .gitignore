@@ -21,7 +21,6 @@ sdist/
 var/
 exps/
 logs/
-figs/
 wheels/
 share/python-wheels/
 *.egg-info/
